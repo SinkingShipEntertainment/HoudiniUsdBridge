@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Options
-set(HOUDINI_PATH ""
+set(HOUDINI_PATH "$ENV{HOUDINI_LOCATION}"
     CACHE STRING
     "The path to the Houdini installation. This is optional if the HFS environment variable is set.")
 set(BOOST_NAMESPACE "boost"
