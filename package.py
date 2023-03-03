@@ -31,14 +31,15 @@ with scope("config") as c:
 
 # NOTE: boost will determine the python version to use
 requires = [
-    "houdini-19.0.383",
+    "houdini-19.5.368",
 ]
 
 private_build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-centos-7", "usd-21.08"],
+    #["platform-linux", "arch-x86_64", "os-centos-7", "usd-21.08"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "usd-22.11"],
 ]
 
 # Pass cmake arguments:
@@ -48,7 +49,7 @@ variants = [
 uuid = "repository.HoudiniUsdBridge"
 
 def pre_build_commands():
-    command("source /opt/rh/devtoolset-6/enable")
+    command("source /opt/rh/devtoolset-7/enable")  # Using devtoolset-7
 
 def commands():
     # NOTE: REZ package versions can have ".sse." to separate the external
