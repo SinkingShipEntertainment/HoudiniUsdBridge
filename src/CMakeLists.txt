@@ -18,7 +18,7 @@ add_compile_definitions(${_houdini_defines})
 
 # Libs we will link with from the Houdini install
 if (WIN32)
-    set(houdini_LINK_LIBS 
+    set(houdini_LINK_LIBS
 	libHOMUI
 	libFUSE
 	libMT
@@ -241,7 +241,7 @@ endif()
 # Convert base USD library names to their actual names based on the prefix
 # computed above, and append the qualified names to HUSD_LINK_LIBS.
 foreach (libname ${usd_LINK_LIB_NAMES})
-    list(APPEND HUSD_LINK_LIBS "${usd_LIB_LINK_PREFIX}${libname}")
+    list(APPEND HUSD_LINK_LIBS "${usd_LIB_LINK_PREFIX}_${libname}")
 endforeach()
 
 # Marking these as SYSTEM suppresses the needless warnings they generate.
