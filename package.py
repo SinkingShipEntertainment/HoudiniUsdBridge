@@ -4,6 +4,19 @@ authors = [
     "SideFx"
 ]
 
+# --------------------------------------
+# NOTE: The HoudiniUsdBridge repo has branches for major Houdini versions.
+# For example, the name of the branch is "houdini19.5".
+# Within that branch, each commit has a message that indicates which specific
+# Houdini version should be used.
+# So, for instance, for Houdini 19.5.368, we need to find the commit message
+# for that specific version and work off from there.
+#
+# Use: git checkout -b <branch_name> <commit-hash>
+# Example (to match Houdini 19.5.368):
+# git checkout -b houdini19.5 1e7a557202808486e128cfaa054ca6ef13b2e310
+# --------------------------------------
+
 # NOTE: version = <bridge_version>.sse.<sse_version>
 version = "19.5.368.sse.1.0.0"
 
